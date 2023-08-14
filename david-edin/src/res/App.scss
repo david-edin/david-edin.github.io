@@ -1,0 +1,28 @@
+@import url(https://rsms.me/inter/inter.css);
+
+@font-face {
+  font-family: 'FT88-Gothique';
+  src: url('FT88-Gothique.woff2');
+}
+
+$inter: 'Inter var', sans-serif;
+$ft88: 'FT88-Gothique';
+
+.container {
+  max-width: 680px;
+  font-family: $inter;
+  font-weight: 500;
+}
+
+.title {
+  font-family: $ft88;
+  font-size: 46pt;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  padding-top: 10pt;
+}
+
+.adjust-kerning {
+  letter-spacing: -12pt;
+}
