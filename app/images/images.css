@@ -1,0 +1,13 @@
+body {
+  max-height: 100vw;
+}
+
+/* Image Display */
+.image {
+  position: absolute;
+  width: 200px;
+}
+
+.image-container {
+  z-index: 0;
+}
