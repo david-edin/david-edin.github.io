@@ -1,8 +1,7 @@
 // Client-Side Rendering, which enables the use of client-side JavaScript capabilities (for example document,getElement doesn't work without it)
 "use client";
 
-import React from 'react';
-import { useEffect } from "react";
+import React, { useEffect } from "react";
 import Link from 'next/link';
 
 const Navigation = () => {
@@ -15,13 +14,13 @@ const Navigation = () => {
 
     // Functions to set the .active-link class
     function setHomeAsActive() {
-      link[0].className = "navigation-link active-link";
+      link[0].className = "navigation-link active-link too-short";
       link[1].className = "navigation-link non-active-link";
     }
 
     function setImagesAsActive() {
       link[1].className = "navigation-link active-link";
-      link[0].className = "navigation-link non-active-link";
+      link[0].className = "navigation-link non-active-link too-short-hover";
     }
 
     // Function to check which link is active on load
@@ -48,10 +47,10 @@ const Navigation = () => {
         <Link
           id="0"
           className={
-            "navigation-link active-link"
+            "navigation-link active-link too-short"
           }
           href="/">
-          Home
+          Idea
         </Link>
 
         <Link

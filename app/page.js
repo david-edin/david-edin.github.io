@@ -1,11 +1,16 @@
-export default function Home() {
+export default function Idea() {
   return (
     <div className="page-text">
-      I want to fetch all the images inside a certain folder and display it
-      on the other page. After that I want them to generate in a random
-      position on the page and with a random size. Afterwards there is going
-      to be an interaction to get rid of an image if you click on it to
-      remove it and reveal what&apos;s underneath!
+      <h2>Portfolio Webseite <br/>Prototyp</h2>
+      <ul>
+        <li>
+          Wie kann eine spannende und ansprechende Portfolio-Webseite aussehen?
+        </li>
+        <li>Eine erste Idee sieht man bei /images</li>
+        <li>Mehr habe ich noch nicht :{"("}</li>
+        <li>Vielleicht auch bisschen angelehnt an das Early Web und wie Webseiten damals ausgesehen und funktioniert haben.</li>
+        <li>Vielleicht erlangt man dadurch mehr Freiheit, Kreativität, Selbstständigkeit? ... etc. beim Web-Coding</li>
+      </ul>
     </div>
   );
 }

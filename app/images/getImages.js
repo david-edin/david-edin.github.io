@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+
 import "./images.css";
 
 const array = [...Array(30)];
@@ -10,17 +11,17 @@ function getRandom(min, max) {
 
 const GetImages = () => {
   return (
-    <div className="image-container">
+    <div className="image-wrapper">
       {array.map((currElement, index) => (
-        // console.log(index),
         <Image
           style={{
-            top: getRandom(0, 400),
-            left: getRandom(0, 600),
+            left: getRandom(5, 80) + "vw",
+            top: getRandom(0, 100) + "%",
             height: "auto",
           }}
           alt="image"
-          src={"/assets/" + (index+1) + ".jpg"}
+          src={"/assets/" + (index + 1) + ".jpg"}
+          priority={true}
           width={0}
           height={0}
           key={index}
