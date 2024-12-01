@@ -1,0 +1,57 @@
+/* Basic style for links */
+a {
+  text-decoration: none;
+  font-family: "Instrument Serif Italic";
+}
+
+/* Navigation */
+.navigation-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.navigation {
+  z-index: 1;
+  width: 100%;
+  padding: 0 25px;
+
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  border-bottom: var(--lightblue) solid 1.5px;
+  background-color: var(--green);
+
+  font-size: var(--default-font-size);
+}
+
+.navigation-link {
+    margin: 10px; 
+    color: var(--lightblue);
+
+    font-size: 40px;
+    font-weight: 900;
+
+    transition: all 0.2s ease;
+    transform: skew(0deg, 4deg);
+}
+
+.navigation-link:nth-child(even) {
+    transform: skew(0deg, -4deg);
+}
+
+.navigation-link:nth-child(even):hover {
+    transform: skew(0deg, 4deg);
+}
+
+.navigation:has(.navigation-link:hover) .navigation-link:nth-child(odd) {
+    transform: skew(0deg, -4deg);
+}
+
+.navigation:has(.navigation-link:hover) .navigation-link:nth-child(even) {
+    transform: skew(0deg, 4deg);
+}
+
+/* Create Navigation Link Animation */
+ .active-link {
+    color: var(--foreground);
+}

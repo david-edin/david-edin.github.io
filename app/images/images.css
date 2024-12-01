@@ -3,6 +3,9 @@
   position: absolute;
   width: 15vw;
   box-sizing: border-box;
+  transform: translate(0px, 0px);
+  border-radius: 5px;
+  border: var(--lightblue) solid 1.5px;
 }
 
 .image-wrapper {

@@ -4,37 +4,40 @@
 import React, { useEffect } from "react";
 import Link from 'next/link';
 
+import "./navigation.css";
+
 const Navigation = () => {
   useEffect(() => {
     // Find the navigation elements
     const link = document.querySelectorAll(".navigation-link");
     const url = window.location.href;
+
     const home = document.getElementById("0");
     const images = document.getElementById("1");
 
     // Functions to set the .active-link class
-    function setHomeAsActive() {
-      link[0].className = "navigation-link active-link too-short";
-      link[1].className = "navigation-link non-active-link";
+    function noActive() {
+      link[0].className = "navigation-link active-link";
+      link[1].className = "navigation-link";
     }
-
+    
     function setImagesAsActive() {
       link[1].className = "navigation-link active-link";
-      link[0].className = "navigation-link non-active-link too-short-hover";
+      link[0].className = "navigation-link";
     }
 
     // Function to check which link is active on load
     if (url.includes("/images")) {
       setImagesAsActive();
     } else {
-      setHomeAsActive();
+      noActive();
     }
 
     //  If a navigation link is clicked it adds the .active-link class
     home.addEventListener("click", () => {
-      setHomeAsActive();
+      noActive();
     });
-
+    
     images.addEventListener("click", () => {
       setImagesAsActive();
     });
@@ -47,7 +50,7 @@ const Navigation = () => {
         <Link
           id="0"
           className={
-            "navigation-link active-link too-short"
+            "navigation-link"
           }
           href="/">
           Idea
@@ -55,7 +58,7 @@ const Navigation = () => {
 
         <Link
           id="1"
-          className={"navigation-link active-link"}
+          className={"navigation-link"}
           href="images">
           Images
         </Link>
