@@ -22,8 +22,8 @@ const Navigation = () => {
     }
     
     function setImagesAsActive() {
-      link[1].className = "navigation-link active-link";
-      link[0].className = "navigation-link";
+      link[1].className = "navigation-link-alt active-link";
+      link[0].className = "navigation-link-alt";
     }
 
     // Function to check which link is active on load

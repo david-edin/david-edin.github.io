@@ -5,7 +5,8 @@
   box-sizing: border-box;
   transform: translate(0px, 0px);
   border-radius: 5px;
-  border: var(--lightblue) solid 1.5px;
+  border: var(--pink) solid 1.5px;
+  background-color: var(--pink);
 }
 
 .image-wrapper {

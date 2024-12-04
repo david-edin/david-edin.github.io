@@ -4,7 +4,7 @@ import Navigation from "./components/navigation";
 // Metadata
 export const metadata = {
   title: "david-edin",
-  description: "intro to webcoding",
+  description: "intro to webcoding"
 };
 
 export default function RootLayout({

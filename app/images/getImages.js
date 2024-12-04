@@ -8,7 +8,6 @@ function getRandom(min, max) {
 }
 
 const GetImages = () => {
-
   return (
     <div className="image-wrapper">
       {array.map((currElement, index) => (

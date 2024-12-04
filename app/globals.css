@@ -9,7 +9,6 @@
   --lilac: #a280ff;
   --pink: #edb3e0;
   --brown: #56351E;
-  --default-font-size: 60px;
 }
 
 /* Change how text selection looks */
@@ -22,13 +21,13 @@
 }
 
 ::-webkit-scrollbar-track {
-  background-color: var(--brown);
+  background-color: var(--green);
+  
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: var(--pink);
   border-radius: 15px;
-  border: var(--lightblue) solid 1.5px;
+  border: var(--pink) solid 1.5px;
 }
 
 /* Set font for use in this document */
@@ -45,6 +44,8 @@
 /* Body style */
 body {
   margin: 0;
+  overflow-x: hidden;
+
   color: var(--foreground);
   background: var(--background);
 
@@ -67,39 +68,91 @@ body {
   text-align: center;
   margin: 20px;
   padding: 20px;
-  font-size: var(--default-font-size);
+  font-size: 60px;
   line-height: 74%;
   color: var(--pink);
+}
+
+.page-wrapper {
+  display: flex;
+  justify-content: center;
+  column-gap: 0;
+  flex-wrap: wrap;
+}
+
+.page {
+  max-width: 700px;
+  margin: 15px;
+  padding: 15px;
+
+  color: var(--foreground);
+  background-color: var(--brown);
+
+  text-shadow: 
+    -1px -1px 1px var(--brown),
+     1px -1px 1px var(--brown),
+    -1px  1px 1px var(--brown),
+     1px  1px 1px var(--brown);
+
+  border: var(--pink) 1.5px solid;
+  border-radius: 15px;
 }
 
 .page-text {
-    font-weight: 900;
-  margin: 20px;
-  padding: 15px;
-  font-size: var(--default-font-size);
-  line-height: 74%;
+  padding: 0 10px;
+  font-family: sans-serif;
+  letter-spacing: -1px;
+  font-size: 30px;
+  line-height: 90%;
+}
 
-  color: var(--pink);
-  background-color: var(--brown);
-  text-shadow: 
-    -2px -2px 0 var(--brown),
-     2px -2px 0 var(--brown),
-    -2px  2px 0 var(--brown),
-     2px  2px 0 var(--brown);
-
-  border-radius: 15px;
-  border: var(--lightblue) solid 1.5px;
+@media (max-width: 700px) {
+  .page {
+    margin: 10px 2px;
+    border-radius: 50px;
+  }
 }
 
 h1, h2, h3, h4 {
+  margin: 20px 0 40px;
+  line-height: 54%;
+  color: var(--pink);
+  text-shadow: 
+    -1px -1px 1px var(--brown),
+     1px -1px 1px var(--brown),
+    -1px  1px 1px var(--brown),
+     1px  1px 1px var(--brown);
+  -webkit-text-stroke: var(--pink) 1px;
   text-align: center;
+
+  font-size: 60px;
+  font-weight: 400;
+  font-family: "Instrument Serif Italic";
+}
+
+@media (max-width: 700px) {
+  h1, h2, h3, h4 {
+    margin: 20px 0 40px;
+    font-weight: 400;
+  }
+}
+
+ul {
+  padding: 0;
+  list-style-type: ":";
+}
+
+.nested {
+  padding: 0 0 0 20px;
 }
 
 li {
-  list-style-type: "-";
   margin: 20px 0;
 }
 
-li:nth-child(odd) {
-  color: var(--foreground);
+@media (max-width: 700px) {
+  li {
+    list-style-type: ":";
+    margin: 10px 0;
+  }
 }
