@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+        <meta name="theme-color" content="#BFD7EA" />
+
+        <title>Start</title>
+
+        <link href="/assets/css/index.css" rel="stylesheet">        <script src="https://cdn.jsdelivr.net/npm/p5@1.11.2/lib/p5.min.js"></script>        <link href="https://fonts.googleapis.com/css2?family=Overpass+Mono&amp;family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&amp;display=swap" rel="stylesheet">    </head>
+    <body>
+        <header>
+            <nav class="navigation">
+                <a class="navigation-link" href="/">Home</a>
+                <span onclick="window.location.reload();" class="navigation-link">Reset</span>
+            </nav>
+        </header>
+
+        <main class="container">
+    <ul class="posts">
+                <li class="post-card">
+            <div class="post-canvas" id="moving-circle"></div>
+            <div class="post">
+                <div class="post-title">
+                    <a href="/moving-circle">
+                        Moving circle                    </a>
+                </div>
+                <p class="post-text">
+                    Move your mouse along the background to change the opacity of the stroke and the size of the circle. If you left click on this page, the sketch is cleared. If you right click on the sketch you can save the contents of the sketch to your files.                </p>
+            </div>
+        </li>
+            </ul>
+
+        </main>
+
+        <script src="/assets/js/moving-circle.js"></script>    </body>
+</html>

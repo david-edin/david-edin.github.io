@@ -1,0 +1,163 @@
+*,
+*:after,
+*:before {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+    background-color: #FDFFFC;
+    color: #040404;
+}
+
+header {
+    width: 100%;
+    position: fixed;
+    background-color: #BFD7EA;
+    border-bottom: #040404 1px solid;
+}
+
+.container {
+    padding: 40px 10px 0;
+}
+
+h1 {
+    font-weight: 400;
+}
+
+.page-title {
+    margin-bottom: 10px;
+}
+
+/* Navigation */
+.navigation {
+    
+    letter-spacing: -0.4px;
+    padding: 10px;
+}
+
+.navigation-link {
+    padding: 2px 8px;
+    background-color: #FDFFFC;
+    outline: 1px solid #040404;
+    border-radius: 100px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+a {
+    color: currentColor;
+    text-decoration: none;
+}
+
+a.link {
+    font-family: "Source Serif 4", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: italic;
+}
+
+/* Post Styles */
+ul {
+    list-style-type: none;
+}
+
+.posts {
+    margin-top: 10px;
+    width: 100%;
+}
+
+.post-card {
+    border-radius: 100px 100px 10px 10px;
+    width: 400px;
+    margin-bottom: 10px;
+    background-color: #C4D6B0;
+    color: #040404;
+    outline: 1px solid #040404;
+}
+
+@media (max-width: 420px) {
+    .post-card {
+        width: 100%;
+    }
+}
+
+.post {
+    padding: 5px;
+    border-radius: 0 0 10px 10px;
+    outline: 1px solid #040404;
+}
+
+.post-title, .post-text {
+    padding: 5px;
+}
+
+.post-title {
+    font-family: "Source Serif 4", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 30px;
+    text-align: center;
+
+    letter-spacing: -1px;
+    line-height: 90%;
+}
+
+.post-text {
+   font-family: Arial, Helvetica, sans-serif;
+   letter-spacing: -0.3px;
+}
+
+@media (max-width: 420px) {
+    .post-text {
+        margin-top: 5px;
+    }
+}
+
+/* Canvas */
+canvas, .post-canvas {
+    width: 100%;
+    height: 70vh; 
+}
+
+.post-canvas {
+    border-radius: 100px 100px 0 0;
+    z-index: 0;
+}
+
+.post-card  canvas {
+    border-radius: 100px 100px 0 0;
+}
+
+
+@media (max-width: 450px) {
+    canvas, .post-canvas {
+        height: 60vh;
+    }
+}
+
+.canvas{
+    width: 100%;
+    height: 90vh; 
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
+.canvas canvas {
+    border-radius: 10px;
+    outline: 1px solid #040404;
+}
+
+@media (max-width: 600px) {
+    .canvas {
+        width: 100%;
+        height: 60vh;
+    }
+}
+
+#moving-circle {
+    background-color: #0C7C59;
+}
