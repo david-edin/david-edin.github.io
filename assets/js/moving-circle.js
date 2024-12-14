@@ -1,4 +1,5 @@
 const id = "moving-circle";
+let isplaying = false;
 
 let size;
 let circleX = 100;
@@ -22,6 +23,8 @@ function setup() {
 
   circleX = width / 2;
   circleY = height / 2;
+
+  noLoop();
 }
 
 function draw() {
@@ -48,8 +51,3 @@ function draw() {
   circle(circleX, circleY, size);
 }
 
-function mousePressed() {
-  if (mouseButton === LEFT) {
-    clear();
-  }
-}

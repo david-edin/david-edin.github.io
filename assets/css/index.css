@@ -12,15 +12,16 @@ body {
     color: #040404;
 }
 
-header {
+footer {
     width: 100%;
     position: fixed;
+    bottom: 0%;
     background-color: #BFD7EA;
-    border-bottom: #040404 1px solid;
+    border-top: #040404 1px solid;
 }
 
 .container {
-    padding: 40px 10px 0;
+    padding: 10px 10px 60px;
 }
 
 h1 {
@@ -33,7 +34,7 @@ h1 {
 
 /* Navigation */
 .navigation {
-    
+    font-size: 16px;
     letter-spacing: -0.4px;
     padding: 10px;
 }
@@ -65,12 +66,11 @@ ul {
 }
 
 .posts {
-    margin-top: 10px;
     width: 100%;
 }
 
 .post-card {
-    border-radius: 100px 100px 10px 10px;
+    border-radius: 200px 200px 10px 10px;
     width: 400px;
     margin-bottom: 10px;
     background-color: #C4D6B0;
@@ -124,12 +124,12 @@ canvas, .post-canvas {
 }
 
 .post-canvas {
-    border-radius: 100px 100px 0 0;
+    border-radius: 200px 200px  0 0;
     z-index: 0;
 }
 
 .post-card  canvas {
-    border-radius: 100px 100px 0 0;
+    border-radius: 200px 200px 0 0;
 }
 
 
@@ -160,4 +160,16 @@ canvas, .post-canvas {
 
 #moving-circle {
     background-color: #0C7C59;
+}
+
+/* Buttons */
+.player {
+    display: inline;
+    padding: 2px 8px;
+    background-color: #FDFFFC;
+    border: none;
+    outline: 1px solid #040404;
+    border-radius: 100px;
+    margin-right: 10px;
+    cursor: pointer;
 }
