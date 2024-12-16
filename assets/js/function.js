@@ -1,23 +1,32 @@
-// const player = document.getElementById("player");
+const player = document.getElementById("player");
+let isplaying = true;
 
-// player.addEventListener("click", (e) => {
-//   isplaying = !isplaying;
+const id = "canvas";
 
-//     if (isplaying === true) {
-//         loop();
-//         player.innerHTML = "Pause";
-//     } else {
-//         noLoop();
-//         player.innerHTML = "Start";
-//     }
-// });
+player.addEventListener("click", (e) => {
+  isplaying = !isplaying;
 
-const posts = document.querySelector('.posts');
+  console.log(player, isplaying);
 
-const masonry = new Masonry(posts, {
-  fitWidth: true,
-  itemSelector: ".post-card",
-  horizontalOrder: true,
-  gutter: 10,
+  if (isplaying === false) {
+    player.innerHTML = "Start";
+    noLoop();
+  } else {
+    player.innerHTML = "Pause";
+    loop();
+  }
 });
 
+function setup() {
+  const element = document.getElementById(id);
+
+  const width = element.offsetWidth;
+  const height = element.offsetHeight;
+
+  console.log(width, height);
+
+  let canvas = createCanvas(width, height);
+  canvas.parent(id);
+
+  loop();
+}

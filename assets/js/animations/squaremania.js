@@ -2,8 +2,6 @@ let size = 10;
 let circleX = 100;
 let circleY = 100;
 
-// let frames = 0;
-
 let bounceSpeed = 4;
 let Xspeed = bounceSpeed;
 let Yspeed = bounceSpeed;
@@ -14,8 +12,7 @@ function setup() {
 }
 
 function draw() {
-  size = map(mouseX, 0, width, 0, 200);
-
+  size = map(mouseX, 0, width, 0, 100);
   let opacity = map(mouseY, 0, height, 0, 255);
 
   let fillColor = 4;
@@ -34,16 +31,7 @@ function draw() {
     
   stroke(strokeColor, opacity);
   fill(fillColor);
-  circle(circleX, circleY, size);
-
-  // frames++;
-
-  // frameRate(4);
-
-  // save("frame.svg");
-
-  // if (frames === 10) {
-  //   noLoop();
-  // }
+  rectMode(CORNERS);
+  rect(circleX, circleY, size, size);
 }
 
