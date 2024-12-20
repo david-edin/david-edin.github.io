@@ -1,0 +1,194 @@
+/* For the whole site */
+*,
+*:after,
+*:before {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    /* overflow-y: hidden; */
+
+    background-color: #FDFFFC;
+    color: #040404;
+}
+
+a {
+    color: currentColor;
+    text-decoration: none;
+}
+
+/* Footer */
+footer {
+    width: 100%;
+    position: fixed;
+    bottom: 0%;
+    background-color: #BFD7EA;
+    border-top: #040404 1px solid;
+}
+
+/* Container */
+.container {
+    padding: 20px 20px 65px;
+}
+
+
+
+/* Page text and title */
+.page-title {
+    font-family: "Source Serif 4", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 30px;
+
+    letter-spacing: -1px;
+    line-height: 90%;
+
+    margin-bottom: 10px;
+}
+
+.page-text p {
+    max-width: 400px;
+
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: -0.3px;
+}
+
+
+
+/* Posting */
+ul {
+    list-style-type: none;
+}
+
+.posts {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 300px);
+    gap: 20px;
+    justify-content: center;
+}
+
+li.post-card {
+
+    width: 300px;
+    height: 490px;
+
+    outline: 1px #040404 solid;
+    border-radius: 200px 200px 10px 10px;
+
+    background-color: #C4D6B0;
+}
+
+@media (max-width: 380px) {
+    .post-card {
+        width: 100%;
+    }
+}
+
+.thumbnail {
+    max-width: 100%;
+}
+
+.thumbnail img {
+    width: 100%;
+
+    outline: 1px #040404 solid;
+    border-radius: 200px 200px  0 0;
+
+    object-fit: cover;
+}
+
+.post {
+    padding: 5px;
+    border-radius: 0 0 10px 10px;
+}
+
+.post-text {
+    padding: 5px;
+}
+
+.post-title {
+    padding: 0 5px;
+    font-family: "Source Serif 4", serif;
+    font-style: italic;
+    font-size: 20px
+}
+
+
+
+/* Canvas */
+.canvas canvas {
+    border-radius: 10px;
+    outline: 1px solid #040404;
+    box-sizing: border-box;
+    width: 100%;
+    height: 80vh;
+
+}
+
+.canvas{
+    width: 100%;
+    height: 80vh;
+    margin-bottom: 10px;
+}
+
+#canvas canvas {
+    background-color: #0C7C59;
+}
+
+
+
+/* Navigation */
+.navigation {
+    display: flex;
+    justify-content: center;
+    column-gap: 10px;
+
+    font-size: 16px;
+    letter-spacing: -0.4px;
+    padding: 10px;
+}
+
+@media (max-width: 500px) {
+    .navigation {
+        justify-content: space-between;
+    }
+}
+
+.links {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+}
+
+.navigation-title {
+    padding: 2px 8px;
+
+    background-color: #040404;
+    color: #FDFFFC;
+
+    outline: 1px solid #040404;
+    border-radius: 100px;
+}
+
+.navigation-link {
+    padding: 2px 8px;
+    background-color: #FDFFFC;
+    outline: 1px solid #040404;
+    border-radius: 100px;
+    cursor: pointer;
+}
+
+/* Buttons */
+.player {
+    display: inline;
+    padding: 2px 8px;
+    background-color: #FDFFFC;
+    border: none;
+    outline: 1px solid #040404;
+    border-radius: 100px;
+    margin-right: 10px;
+    cursor: pointer;
+}
