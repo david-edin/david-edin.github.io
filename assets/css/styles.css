@@ -111,6 +111,13 @@ li.post-card {
     line-height: 92%;
 }
 
+@media (max-width: 440px) {
+  .post-title {
+    padding-top: 15px;
+    font-size: 20px;
+  }
+}
+
 /* .posts:has(.post-card:hover) .t {
   border: 0.5px solid rgb(222, 222, 222);
 } */
@@ -160,18 +167,25 @@ li.post-card {
   z-index: 20;
   padding: 10px;
   letter-spacing: -0.4px;
-  
+}
+
+@media (max-width: 440px) {
+  .nav {
+    font-size: 20px;
+    background-color: #040404;
+  }
 }
 
 .nav-link-group {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: baseline;
   column-gap: 0.5rem;
 }
 
 .nav-link {
   display: inline-block;
+  text-align: center;
   padding: 2px 8px;
 
   background-color: #040404;
