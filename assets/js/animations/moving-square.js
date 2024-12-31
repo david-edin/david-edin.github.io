@@ -1,8 +1,6 @@
 let size = 10;
-let opacity = 255;
-
-let circleX = 100;
-let circleY = 100;
+let squareX = 100;
+let squareY = 100;
 
 // let frames = 0;
 
@@ -13,22 +11,22 @@ let Yspeed = bounceSpeed;
 function draw() {
   size = map(mouseX, 0, width, 0, 200);
 
-  opacity = map(mouseY, 0, height, 0, 255);
+  let opacity = map(mouseY, 0, height, 0, 255);
 
-  if (circleX > width || circleX < 0) {
+  if (squareX > width || squareX < 0) {
     Xspeed = Xspeed * -1;
   }
 
-  if (circleY > height || circleY < 0) {
+  if (squareY > height || squareY < 0) {
     Yspeed = Yspeed * -1;
   }
 
-  circleX += Xspeed;
-  circleY += Yspeed;
+  squareX += Xspeed;
+  squareY += Yspeed;
     
   stroke(strokeColor, opacity);
   fill(fillColor);
-  circle(circleX, circleY, size);
+  square(squareX, squareY, size);
 
   // frames++;
 

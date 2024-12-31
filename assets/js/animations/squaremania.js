@@ -12,7 +12,7 @@ function setup() {
 }
 
 function draw() {
-  size = map(mouseX, 0, width, 0, 100);
+  size = map(mouseX, 0, width, 0, 200);
   let opacity = map(mouseY, 0, height, 0, 255);
 
   let fillColor = 4;

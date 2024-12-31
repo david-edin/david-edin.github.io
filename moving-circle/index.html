@@ -7,22 +7,42 @@
 
         <title>Moving circle</title>
 
-        <link href="/assets/css/styles.css" rel="stylesheet">        <link href="https://fonts.googleapis.com/css2?family=Overpass+Mono&amp;family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&amp;display=swap" rel="stylesheet">    
+        <link href="/assets/css/styles.css" rel="stylesheet">    
         <script src="https://cdn.jsdelivr.net/npm/p5@1.11.2/lib/p5.min.js"></script>    </head>
     <body>
+        
+<nav class="nav">
+  
+  <div class="nav-link-group">
+    
+    <a href="/home"
+       class="nav-link">
+      Tools
+    </a>
+
+                <span>→</span>
+            <span class="nav-link active"">
+              Moving circle            </span>
+    
+    <a href="/info"
+       class="nav-link">
+      Info
+    </a>
+  </div>
+
+</nav>
         <main class="container">
     <div class="canvas" id="canvas"></div>
     
-    <p>Move your mouse along the background to change the opacity of the stroke and the size of the circle. If you right click on the sketch you can save the contents of the sketch to your files.</p>
+    <p class="text">Move your mouse along the background to change the opacity of the stroke and the size of the circle.</p>
 
         </main>
         <footer>
             <nav class="navigation">
-                <span class="navigation-title">Moving circle</span>
                 <span class="links">
-                    <a class="navigation-link" href="/">Home</a>
-                    <span onclick="window.location.reload();" class="navigation-link">Reset</span>
-                    <span id="player" class="player">Pause</span>
+                    <button onclick="window.location.reload();">Reset</button>
+                    <button id="player" class="player">Pause</button>
+                    <button>Save</button>
                 </span>
                 
             </nav>

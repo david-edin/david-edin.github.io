@@ -3,6 +3,9 @@ let isplaying = true;
 
 const id = "canvas";
 
+let fillColor = 4;
+let strokeColor = 222;
+
 player.addEventListener("click", (e) => {
   isplaying = !isplaying;
 
@@ -25,8 +28,13 @@ function setup() {
 
   console.log(width, height);
 
-  let canvas = createCanvas(width, height);
-  canvas.parent(id);
+  if (!window.location.href.includes("zooming-and-moving")) {
+    let canvas = createCanvas(width, height);
+    canvas.parent(id);
+  } else {
+    let canvas = createCanvas(width, height, WEBGL);
+    canvas.parent(id);
+  }
 
   loop();
 }
