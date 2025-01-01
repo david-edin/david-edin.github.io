@@ -9,7 +9,7 @@ let strokeColor = 222;
 player.addEventListener("click", (e) => {
   isplaying = !isplaying;
 
-  console.log(player, isplaying);
+  // console.log(player, isplaying);
 
   if (isplaying === false) {
     player.innerHTML = "Start";
@@ -26,7 +26,7 @@ function setup() {
   const width = element.offsetWidth;
   const height = element.offsetHeight;
 
-  console.log(width, height);
+  // console.log(width, height);
 
   if (!window.location.href.includes("zooming-and-moving")) {
     let canvas = createCanvas(width, height);
@@ -37,4 +37,18 @@ function setup() {
   }
 
   loop();
+}
+
+const saveButton = document.getElementById("save");
+
+saveButton.addEventListener("click", saveSketch);
+
+function saveSketch() {
+  saveCanvas("sketch", "png");
+}
+
+function keyTyped() {
+  if (key == "s") {
+    saveCanvas("sketch", "png");
+  }
 }
