@@ -2,8 +2,6 @@ let size = 10;
 let squareX = 100;
 let squareY = 100;
 
-// let frames = 0;
-
 let bounceSpeed = 4;
 let Xspeed = bounceSpeed;
 let Yspeed = bounceSpeed;
@@ -24,18 +22,8 @@ function draw() {
   squareX += Xspeed;
   squareY += Yspeed;
     
-  stroke(strokeColor, opacity);
+  stroke([...strokeColor, opacity]);
   fill(fillColor);
   square(squareX, squareY, size);
-
-  // frames++;
-
-  // frameRate(4);
-
-  // save("frame.svg");
-
-  // if (frames === 10) {
-  //   noLoop();
-  // }
 }
 

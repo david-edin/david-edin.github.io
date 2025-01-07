@@ -15,9 +15,6 @@ function draw() {
   size = map(mouseX, 0, width, 0, 200);
   let opacity = map(mouseY, 0, height, 0, 255);
 
-  let fillColor = 4;
-  let strokeColor = 222;
-
   if (circleX > width || circleX < 0) {
     Xspeed = Xspeed * -1;
   }
@@ -29,8 +26,9 @@ function draw() {
   circleX += Xspeed;
   circleY += Yspeed;
     
-  stroke(strokeColor, opacity);
+  stroke([...strokeColor, opacity]);
   fill(fillColor);
+  
   rectMode(CORNERS);
   rect(circleX, circleY, size, size);
 }

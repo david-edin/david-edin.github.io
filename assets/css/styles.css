@@ -55,7 +55,7 @@ a {
 }
 
 .text {
-  width: 400px;
+  max-width: 500px;
 }
 
 
@@ -72,6 +72,7 @@ ul {
 
   font-size: 30px;
 }
+
 
 li.post-card {
   color: #bfd7ea;
@@ -96,7 +97,7 @@ li.post-card {
     padding: 0 5px;
 }
 
-.post-title, .post-description {
+.post-description {
     padding: 10px 5px 0px;
 }
 
@@ -104,6 +105,7 @@ li.post-card {
     z-index: 2;
     position: relative;
     width: fit-content;
+    padding: 11px 0px 0px;
 
     text-transform: uppercase;
     font-size: 16px;
@@ -113,7 +115,7 @@ li.post-card {
 
 @media (max-width: 440px) {
   .post-title {
-    padding-top: 15px;
+    padding: 15px 5px 0px;
     font-size: 20px;
   }
 }
@@ -127,7 +129,7 @@ li.post-card {
   box-sizing: border-box;
 
   background-color: #040404;
-  border: 0.5px solid rgb(222, 222, 222);
+  border: 0.5px solid rgb(242, 242, 242);
   border-radius: 100px;
 }
 
@@ -191,7 +193,7 @@ li.post-card {
   background-color: #040404;
   color: #bfd7ea;
 
-  border: 0.5px solid rgb(222, 222, 222);
+  border: 0.5px solid rgb(242, 242, 242);
   border-radius: 100px;
 
   cursor: pointer;
@@ -219,16 +221,7 @@ footer {
 
 
 
-/* Buttons */
-/* .player {
-  padding: 2px 8px;
-  color: #040404;
-  background-color: #fdfffc;
-  border-radius: 100px;
-  margin-right: 10px;
-  cursor: pointer;
-} */
-
+/* Tool navigation */
 .tool-nav {
   z-index: 20;
   padding: 10px;
@@ -242,24 +235,65 @@ footer {
   column-gap: 0.5rem;
 }
 
+@media (max-width: 440px) {
+  .tool-buttons {
+    justify-content: space-between;
+  }
+}
+
+
 .tool-buttons button {
-  display: inline-block;
-  text-align: center;
+  display: inline-flex;
   padding: 2px 8px;
 
   background-color: #040404;
   color: #bfd7ea;
 
-  border: 0.5px solid rgb(222, 222, 222);
+  border: 0.5px solid #f2f2f2;
   border-radius: 100px;
 
   cursor: pointer;
+
   text-transform: uppercase;
   font-size: 16px;
+
+  text-align: center;
 }
 
 @media (max-width: 440px) {
   .tool-buttons button {
     font-size: 20px;
   }
+}
+
+
+
+/* Color input */
+.tool-color-input {
+  display: flex;
+  justify-content: center;
+}
+
+.tool-color-input input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+  margin: 0px 5px;
+  padding: 0;
+
+  height: 30px;
+  width: 26px;
+
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.tool-color-input input::-webkit-color-swatch {
+
+  padding: 0;
+
+  border-radius: 100px;
+  border: 0.5px solid #f2f2f2;
 }
