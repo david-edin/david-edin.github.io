@@ -27,9 +27,11 @@
 
 </nav>
         <main class="container">
+    <div class="page-text display-none fixed">
+        <p>Click to toggle a mirrored shape and move along the screen to draw.</p>
+    </div>
+
     <div class="canvas" id="canvas"></div>
-    
-    <p class="text">Click to toggle a mirrored shape and move along the screen to draw.</p>
 
         </main>
         <footer>
@@ -47,7 +49,8 @@
 
             <nav class="tool-nav">
                 <span class="tool-buttons">
-                    <button onclick="window.location.reload();">Reset</button>
+                    <button id="info">How-to-use</button>
+                    <button id="reset">Reset</button>
                     <button id="player" class="player">Pause</button>
                     <button id="save">Save</button>
                 </span>

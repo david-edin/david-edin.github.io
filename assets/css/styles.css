@@ -14,7 +14,7 @@ body {
 }
 
 body:has(canvas) {
-    overflow-y: hidden;
+  overflow-y: hidden;
 }
 
 a {
@@ -22,25 +22,17 @@ a {
   text-decoration: none;
 }
 
-.container:has(.page-text) {
+/* Page text */
+.page-text {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 15px 15px;
-}
-
-/* Page text and title */
-.page-title {
-  font-size: 16px;
-  text-transform: uppercase;
-
-  letter-spacing: -0.4px;
-
-  margin-bottom: 10px;
+  height: fit-content;
 }
 
 .page-text p {
   font-size: 42px;
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: Georgia, "Times New Roman", Times, serif;
 }
 
 .page-text a {
@@ -50,14 +42,19 @@ a {
 @media (max-width: 1200px) {
   .page-text p {
     font-size: 32px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: Georgia, "Times New Roman", Times, serif;
   }
 }
 
-.text {
-  max-width: 500px;
+.display-none {
+  display: none;
 }
 
+.fixed {
+  z-index: 99;
+  position: fixed;
+  background-color: #040404;
+}
 
 
 /* Posting */
@@ -73,19 +70,18 @@ ul {
   font-size: 30px;
 }
 
-
 li.post-card {
   color: #bfd7ea;
   background-color: #040404;
 }
 
 .thumbnail img {
-    display: block;
-    max-width: 100%;
+  display: block;
+  max-width: 100%;
 
-    object-fit: cover;
-    z-index: 0;
-    opacity: 1;
+  object-fit: cover;
+  z-index: 0;
+  opacity: 1;
 }
 
 .no-opacity {
@@ -93,24 +89,24 @@ li.post-card {
 }
 
 .post {
-    height: 0px;
-    padding: 0 5px;
+  height: 0px;
+  padding: 0 5px;
 }
 
 .post-description {
-    padding: 10px 5px 0px;
+  padding: 10px 5px 0px;
 }
 
 .post-title {
-    z-index: 2;
-    position: relative;
-    width: fit-content;
-    padding: 11px 0px 0px;
+  z-index: 2;
+  position: relative;
+  width: fit-content;
+  padding: 11px 0px 0px;
 
-    text-transform: uppercase;
-    font-size: 16px;
-    letter-spacing: -0.4px;
-    line-height: 92%;
+  text-transform: uppercase;
+  font-size: 16px;
+  letter-spacing: -0.4px;
+  line-height: 92%;
 }
 
 @media (max-width: 440px) {
@@ -137,10 +133,8 @@ li.post-card {
   z-index: 4;
   font-size: 80%;
 
-  font-family: 'Georgia', 'Times New Roman', Times, serif;
+  font-family: "Georgia", "Times New Roman", Times, serif;
 }
-
-
 
 /* Canvas */
 .canvas canvas {
@@ -161,8 +155,6 @@ li.post-card {
 #canvas canvas {
   background-color: #040404;
 }
-
-
 
 /* Navigation */
 .nav {
@@ -221,8 +213,6 @@ footer {
   z-index: 20;
 }
 
-
-
 /* Tool navigation */
 .tool-nav {
   z-index: 20;
@@ -239,10 +229,10 @@ footer {
 
 @media (max-width: 440px) {
   .tool-buttons {
-    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 0.5rem;
   }
 }
-
 
 .tool-buttons button {
   display: inline-flex;
@@ -267,8 +257,6 @@ footer {
     font-size: 20px;
   }
 }
-
-
 
 /* Color input */
 .tool-color-input {
@@ -305,4 +293,3 @@ footer {
   border-radius: 100px;
   border: 0.5px solid #f2f2f2;
 }
-

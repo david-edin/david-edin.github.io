@@ -1,32 +1,31 @@
-let balls = [];
-let ballsCount = 30;
+let bubbles = [];
 
 function mouseDragged() {
   const speed = map(mouseX, 0, width, 0, 5);
   const radius = map(mouseY, 0, height, 30, 50);
 
-  let newBall = new Ball(mouseX, mouseY, radius, speed);
+  let bubble = new Bubble(mouseX, mouseY, radius, speed);
 
-  if (balls.length > 1000) {
-    balls.shift();
+  if (bubbles.length > 1000) {
+    bubbles.shift();
   } else {
-    balls.push(newBall);
+    bubbles.push(bubble);
   }
 }
 
 function draw() {
   background(0);
 
-  for (let object of balls) {
-    object.move();
+  for (let bubble of bubbles) {
+    bubble.move();
   }
 
   if (frameCount % 600 == 0) {
-    balls.shift();
+    bubbles.shift();
   }
 }
 
-class Ball {
+class Bubble {
   constructor(x, y, radius, speed) {
     this.x = x;
     this.y = y;

@@ -1,10 +1,26 @@
+// Info button
+const info = document.getElementById("info");
+const pageText = document.querySelector(".page-text");
+
+info.addEventListener("click", (e) => {
+  pageText.classList.toggle("display-none");
+});
+
+// Reset button 
+const reset = document.getElementById("reset");
+
+reset.addEventListener("click", (e) => {
+  console.log("reset");
+  clear();
+
+  if (window.location.href.includes("particles")) {
+    bubbles = [];
+  }
+});
+
+// Play button
 const player = document.getElementById("player");
 let isplaying = true;
-
-const id = "canvas";
-
-let fillColor;
-let strokeColor;
 
 player.addEventListener("click", (e) => {
   isplaying = !isplaying;
@@ -19,6 +35,27 @@ player.addEventListener("click", (e) => {
     loop();
   }
 });
+
+// Save button
+function saveSketch() {
+  saveCanvas("sketch", "png");
+}
+
+const saveButton = document.getElementById("save");
+
+saveButton.addEventListener("click", saveSketch);
+
+function keyTyped() {
+  if (key == "s") {
+    saveSketch();
+  }
+}
+
+// Display canvas and define fill and stroke color
+const id = "canvas";
+
+let fillColor;
+let strokeColor;
 
 function setup() {
   const element = document.getElementById(id);
@@ -42,27 +79,11 @@ function setup() {
   loop();
 }
 
-const saveButton = document.getElementById("save");
-
-saveButton.addEventListener("click", saveSketch);
-
-function saveSketch() {
-  saveCanvas("sketch", "png");
-}
-
-function keyTyped() {
-  if (key == "s") {
-    saveCanvas("sketch", "png");
-  }
-}
-
-
-
 // Convert hex to RGB
 function hexToRgb(hex) {
   let r = 0,
-      g = 0,
-      b = 0;
+    g = 0,
+    b = 0;
 
   // 3 digits
   if (hex.length === 4) {
@@ -81,8 +102,7 @@ function hexToRgb(hex) {
   return [r, g, b];
 }
 
-
-
+// Change color input value
 const input_fillColor = document.getElementById("input_fillColor");
 const input_strokeColor = document.getElementById("input_strokeColor");
 
@@ -91,6 +111,7 @@ if (input_fillColor) {
     console.log(e.target.value);
 
     fillColor = hexToRgb(e.target.value); // Convert hex to RGB
+    localStorage.setItem("fill", e.target.value);
   });
 }
 
@@ -99,5 +120,26 @@ if (input_strokeColor) {
     console.log(e.target.value);
 
     strokeColor = hexToRgb(e.target.value); // Convert hex to RGB
+    localStorage.setItem("stroke", e.target.value);
   });
+}
+
+let savedFill,
+    savedStroke;
+
+window.addEventListener("load", (e) => {
+  savedFill = localStorage.getItem("fill");
+  savedStroke = localStorage.getItem("stroke");
+
+  if (savedFill || savedStroke) {
+    getLocalStorage();
+  }
+});
+
+function getLocalStorage() {
+  input_fillColor.value = savedFill;
+  input_strokeColor.value = savedStroke;
+
+  fillColor = hexToRgb(savedFill);
+  strokeColor = hexToRgb(savedStroke);
 }
