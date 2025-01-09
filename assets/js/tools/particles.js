@@ -2,7 +2,7 @@ function mouseDragged() {
   const speed = map(mouseX, 0, width, 0, 5);
   const radius = map(mouseY, 0, height, 30, 50);
 
-  let bubble = new Bubble(mouseX, mouseY, radius, speed);
+  let bubble = new Bubble(mouseX, mouseY, radius, speed, fillColor, strokeColor);
 
   if (array.length > 1000) {
     array.shift();
@@ -24,7 +24,7 @@ function draw() {
 }
 
 class Bubble {
-  constructor(x, y, radius, speed) {
+  constructor(x, y, radius, speed, fill, stroke) {
     this.x = x;
     this.y = y;
 
@@ -33,6 +33,8 @@ class Bubble {
     this.Yspeed = speed;
 
     this.shape = circle;
+    this.fill = fill;
+    this.stroke = stroke;
   }
 
   move() {
@@ -48,8 +50,8 @@ class Bubble {
     this.y += this.Yspeed;
 
     ellipseMode(CENTER);
-    fill(fillColor);
-    stroke(strokeColor);
+    fill(this.fill);
+    stroke(this.stroke);
     this.shape(this.x, this.y, this.radius * 2);
   }
 }
