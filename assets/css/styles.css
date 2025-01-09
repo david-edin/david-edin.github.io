@@ -25,7 +25,6 @@ a {
 /* Page text */
 .page-text {
   max-width: 1200px;
-  margin: 0 auto;
   padding: 0 15px 15px;
   height: fit-content;
 }
@@ -259,12 +258,12 @@ footer {
 }
 
 /* Color input */
-.tool-color-input {
+.tool-inputs {
   display: flex;
   justify-content: center;
 }
 
-.tool-color-input input {
+input[type="color"] {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -280,16 +279,30 @@ footer {
   cursor: pointer;
 }
 
-@media (max-width: 440px) {
+/* @media (max-width: 440px) {
   .tool-color-input input {
     height: 30px;
     width: 30px;
   }
-}
+} */
 
 .tool-color-input input::-webkit-color-swatch {
   padding: 0;
 
   border-radius: 100px;
   border: 0.5px solid #f2f2f2;
+}
+
+input[type="checkbox"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+  width: 30px;
+  height: 30px;
+
+  border-radius: 100px;
+  border: 0.5px solid #f2f2f2;
+
+  cursor: pointer;
 }

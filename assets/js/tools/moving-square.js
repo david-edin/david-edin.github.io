@@ -4,7 +4,7 @@ let squareY = 100;
 
 let bounceSpeed = 4;
 let Xspeed = bounceSpeed;
-let Yspeed = bounceSpeed;
+let Yspeed = bounceSpeed+1;
 
 function draw() {
   size = map(mouseX, 0, width, 0, 200);

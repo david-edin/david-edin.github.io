@@ -5,18 +5,18 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
         <meta name="theme-color" content="#040404" />
 
-        <title>Feathers or needles</title>
+        <title>Line Draw</title>
 
         <link href="/assets/css/styles.css" rel="stylesheet">    
         <script src="https://cdn.jsdelivr.net/npm/p5@1.11.2/lib/p5.min.js"></script>    </head>
     <body>
-        
+        <header>
+            
 <nav class="nav">
-  
   <div class="nav-link-group">
     
                 <span class="nav-link active"">
-              Feathers or needles            </span>
+              Line Draw            </span>
             <span>←</span>
     
               <a href="/"
@@ -25,26 +25,33 @@
           </a>
       </div>
 
-</nav>
+</nav>        </header>
+
         <main class="container">
     <div class="page-text display-none fixed">
-        <p>Move your mouse along the background to morph between the feathers and needles.</p>
+        <p>Click to create the starting point of a line. The more you click, the more lines there are. Each ending point of a line is the starting point of a new line. If the mouse or finger is dragged across the screen, the result is more or less similiar to a normal drawing program. The faster you drag, the points morph into lines.</p>
     </div>
 
     <div class="canvas" id="canvas"></div>
 
         </main>
         <footer>
-            <div class="tool-color-input" >
-                <input type="color" 
-                    id="input_strokeColor" 
-                    name="strokeColor" 
-                    value="#f2f2f2" />
+            <div class="tool-inputs">
+                <!-- <input type="checkbox"
+                    id="special-function"
+                    name="specialFunction" />
+                     -->
+                <div class="tool-color-input" >
+                    <input type="color" 
+                        id="input_strokeColor" 
+                        name="strokeColor" 
+                        value="#f2f2f2" />
 
-                <input type="color" 
-                    id="input_fillColor" 
-                    name="fillColor" 
-                    value="#040404" />
+                    <input type="color" 
+                        id="input_fillColor" 
+                        name="fillColor" 
+                        value="#040404" />
+                </div>
             </div>
 
             <nav class="tool-nav">
@@ -57,5 +64,5 @@
             </nav>
         </footer>
 
-        <script src="/assets/js/animations/feathers-or-needles.js"></script>        <script src="/assets/js/function.js"></script>    </body>
+        <script src="/assets/js/tools/line-draw.js"></script>        <script src="/assets/js/function.js"></script>    </body>
 </html>

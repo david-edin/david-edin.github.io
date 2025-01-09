@@ -1,27 +1,25 @@
-let bubbles = [];
-
 function mouseDragged() {
   const speed = map(mouseX, 0, width, 0, 5);
   const radius = map(mouseY, 0, height, 30, 50);
 
   let bubble = new Bubble(mouseX, mouseY, radius, speed);
 
-  if (bubbles.length > 1000) {
-    bubbles.shift();
+  if (array.length > 1000) {
+    array.shift();
   } else {
-    bubbles.push(bubble);
+    array.push(bubble);
   }
 }
 
 function draw() {
   background(0);
 
-  for (let bubble of bubbles) {
+  for (let bubble of array) {
     bubble.move();
   }
 
   if (frameCount % 600 == 0) {
-    bubbles.shift();
+    array.shift();
   }
 }
 

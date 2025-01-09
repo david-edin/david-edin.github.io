@@ -1,3 +1,5 @@
+let array = [];
+
 // Info button
 const info = document.getElementById("info");
 const pageText = document.querySelector(".page-text");
@@ -11,11 +13,9 @@ const reset = document.getElementById("reset");
 
 reset.addEventListener("click", (e) => {
   console.log("reset");
-  clear();
 
-  if (window.location.href.includes("particles")) {
-    bubbles = [];
-  }
+  clear();
+  array = [];
 });
 
 // Play button
@@ -143,3 +143,11 @@ function getLocalStorage() {
   fillColor = hexToRgb(savedFill);
   strokeColor = hexToRgb(savedStroke);
 }
+
+// Special function button
+let specialFunction = false;
+const special = document.getElementById("specialFunction");
+
+special.addEventListener("click", (e) => {
+  specialFunction = !specialFunction;
+})

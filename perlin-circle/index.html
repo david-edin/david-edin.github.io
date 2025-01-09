@@ -10,9 +10,9 @@
         <link href="/assets/css/styles.css" rel="stylesheet">    
         <script src="https://cdn.jsdelivr.net/npm/p5@1.11.2/lib/p5.min.js"></script>    </head>
     <body>
-        
+        <header>
+            
 <nav class="nav">
-  
   <div class="nav-link-group">
     
                 <span class="nav-link active"">
@@ -25,7 +25,8 @@
           </a>
       </div>
 
-</nav>
+</nav>        </header>
+
         <main class="container">
     <div class="page-text display-none fixed">
         <p></p>
@@ -35,16 +36,22 @@
 
         </main>
         <footer>
-            <div class="tool-color-input" >
-                <input type="color" 
-                    id="input_strokeColor" 
-                    name="strokeColor" 
-                    value="#f2f2f2" />
+            <div class="tool-inputs">
+                <!-- <input type="checkbox"
+                    id="special-function"
+                    name="specialFunction" />
+                     -->
+                <div class="tool-color-input" >
+                    <input type="color" 
+                        id="input_strokeColor" 
+                        name="strokeColor" 
+                        value="#f2f2f2" />
 
-                <input type="color" 
-                    id="input_fillColor" 
-                    name="fillColor" 
-                    value="#040404" />
+                    <input type="color" 
+                        id="input_fillColor" 
+                        name="fillColor" 
+                        value="#040404" />
+                </div>
             </div>
 
             <nav class="tool-nav">
@@ -57,5 +64,5 @@
             </nav>
         </footer>
 
-        <script src="/assets/js/animations/perlin-circle.js"></script>        <script src="/assets/js/function.js"></script>    </body>
+        <script src="/assets/js/tools/perlin-circle.js"></script>        <script src="/assets/js/function.js"></script>    </body>
 </html>
