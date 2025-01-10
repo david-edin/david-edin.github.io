@@ -35,6 +35,11 @@ function mouseClicked() {
     array.push(dash);
 }
 
+function touchEnded() {
+    let dash = new Dash(x, y, fillColor, strokeColor);
+    array.push(dash);
+}
+
 class Dash {
     constructor(x, y, fill, stroke) {
         this.x = x;

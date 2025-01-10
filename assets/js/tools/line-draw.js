@@ -6,6 +6,12 @@ function mouseClicked() {
   array.push(dash);
 }
 
+function touchEnded() {
+  let dash = new Dash(mouseX, mouseY, fillColor, strokeColor);
+  dash.createPoint();
+  array.push(dash);
+}
+
 function draw() {
   // background(0);
 

@@ -1,6 +1,11 @@
 let strWeight = 10;
 
-function mouseClicked() {
+function mousePressed() {
+  let dash = new Dash(mouseX, mouseY, fillColor, strokeColor);
+  array.push(dash);
+}
+
+function touchEnded() {
   let dash = new Dash(mouseX, mouseY, fillColor, strokeColor);
   array.push(dash);
 }

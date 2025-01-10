@@ -279,12 +279,12 @@ input[type="color"] {
   cursor: pointer;
 }
 
-/* @media (max-width: 440px) {
+@media (max-width: 440px) {
   .tool-color-input input {
     height: 30px;
     width: 30px;
   }
-} */
+}
 
 .tool-color-input input::-webkit-color-swatch {
   padding: 0;
