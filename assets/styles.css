@@ -1,0 +1,61 @@
+*,
+*:after,
+*:before {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  max-width: 1100px;
+  margin: 0 auto;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 10px;
+}
+
+p {
+  margin-bottom: 10px;
+  font-size: 44px;
+}
+
+@media (max-width: 600px) {
+  p {
+    font-size: 24px;
+  }
+}
+
+a {
+  color: currentColor;
+  text-decoration: none;
+
+  display: inline-block;
+  width: fit-content;
+  
+  text-decoration: underline;
+  padding: 0 2px;
+}
+
+a:after {
+  content: "↗";
+
+  line-height: 80%;
+}
+
+img {
+  border-radius: 10px;
+}
+
+.margin-bot {
+  margin-bottom: 100px;
+}
+
+@media (max-width: 900px) {
+  .margin-bot {
+    margin-bottom: 75px;
+  }
+}
+
+@media (max-width: 600px) {
+  .margin-bot {
+    margin-bottom: 40px;
+  }
+}
