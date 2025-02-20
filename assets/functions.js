@@ -1,7 +1,7 @@
 let images1 = Macy({
   container: ".grid-1",
   trueOrder: false,
-  waitForImages: true,
+  waitForImages: false,
   margin: 10,
   columns: 3,
   breakAt: {
@@ -13,7 +13,7 @@ let images1 = Macy({
 let images2 = Macy({
   container: ".grid-2",
   trueOrder: false,
-  waitForImages: true,
+  waitForImages: false,
   margin: 10,
   columns: 2,
   breakAt: {
